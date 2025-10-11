@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WAF Test</title>
+</head>
+<body>
+    <h1>success</h1>
+    <p>This is a dummy page for WAF testing</p>
+    
+    <!-- Query parameter test -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        if (id) {
+            document.body.innerHTML += '<p>ID Parameter: ' + id + '</p>';
+        }
+    </script>
+</body>
+</html>
